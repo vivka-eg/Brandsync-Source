@@ -120,7 +120,7 @@ h4 {
 
 .button-demo {
   padding: var(--spacing-300);
-  background-color: var(--surface-container);
+  background-color: var(--surface-base);
   border-radius: var(--border-radius-100);
   border: 1px solid var(--border-default);
 }
