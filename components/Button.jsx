@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styles/_tokens.css';
 import './Button.css';
 

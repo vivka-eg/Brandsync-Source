@@ -2,9 +2,9 @@
 .button {
   font-family: var(--font-family-body);
   font-weight: var(--font-weight-medium);
-  border: none;
+  border: var(--border-width-0);
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: var(--transition-default);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -14,29 +14,29 @@
 
 .button:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: var(--opacity-disabled);
 }
 
 /* Button Sizes */
 .button--small {
   padding: var(--spacing-75) var(--spacing-150);
-  font-size: 14px;
+  font-size: var(--font-size-small);
   border-radius: var(--border-radius-75);
-  min-height: 32px;
+  min-height: var(--sizing-400);
 }
 
 .button--medium {
   padding: var(--spacing-100) var(--spacing-200);
-  font-size: 16px;
+  font-size: var(--font-size-medium);
   border-radius: var(--border-radius-100);
-  min-height: 40px;
+  min-height: var(--sizing-500);
 }
 
 .button--large {
   padding: var(--spacing-150) var(--spacing-300);
-  font-size: 18px;
+  font-size: var(--font-size-large);
   border-radius: var(--border-radius-100);
-  min-height: 48px;
+  min-height: var(--sizing-600);
 }
 
 /* Primary Button - Text Only */
@@ -51,8 +51,8 @@
 
 .button--primary:focus:not(:disabled) {
   background-color: var(--color-primary-focused);
-  outline: 2px solid var(--border-primary-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-primary-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--primary:active:not(:disabled) {
@@ -71,8 +71,8 @@
 
 .button--primary-start-icon:focus:not(:disabled) {
   background-color: var(--color-primary-focused);
-  outline: 2px solid var(--border-primary-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-primary-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--primary-start-icon:active:not(:disabled) {
@@ -91,8 +91,8 @@
 
 .button--primary-end-icon:focus:not(:disabled) {
   background-color: var(--color-primary-focused);
-  outline: 2px solid var(--border-primary-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-primary-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--primary-end-icon:active:not(:disabled) {
@@ -110,7 +110,7 @@
 .button--neutral {
   background-color: var(--color-neutral-container);
   color: var(--text-neutral-default);
-  border: 1px solid var(--border-neutral-container);
+  border: var(--border-width-thin) solid var(--border-neutral-container);
 }
 
 .button--neutral:hover:not(:disabled) {
@@ -123,8 +123,8 @@
   background-color: var(--color-neutral-container-focused);
   border-color: var(--border-neutral-focus);
   color: var(--text-neutral-focused);
-  outline: 2px solid var(--border-neutral-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-neutral-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--neutral:active:not(:disabled) {
@@ -137,7 +137,7 @@
 .button--neutral-start-icon {
   background-color: var(--color-neutral-container);
   color: var(--text-neutral-default);
-  border: 1px solid var(--border-neutral-container);
+  border: var(--border-width-thin) solid var(--border-neutral-container);
 }
 
 .button--neutral-start-icon:hover:not(:disabled) {
@@ -150,8 +150,8 @@
   background-color: var(--color-neutral-container-focused);
   border-color: var(--border-neutral-focus);
   color: var(--text-neutral-focused);
-  outline: 2px solid var(--border-neutral-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-neutral-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--neutral-start-icon:active:not(:disabled) {
@@ -164,7 +164,7 @@
 .button--neutral-end-icon {
   background-color: var(--color-neutral-container);
   color: var(--text-neutral-default);
-  border: 1px solid var(--border-neutral-container);
+  border: var(--border-width-thin) solid var(--border-neutral-container);
 }
 
 .button--neutral-end-icon:hover:not(:disabled) {
@@ -177,8 +177,8 @@
   background-color: var(--color-neutral-container-focused);
   border-color: var(--border-neutral-focus);
   color: var(--text-neutral-focused);
-  outline: 2px solid var(--border-neutral-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-neutral-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--neutral-end-icon:active:not(:disabled) {
@@ -199,7 +199,7 @@
 .button--subtle {
   background-color: transparent;
   color: var(--text-neutral-default);
-  border: 1px solid transparent;
+  border: var(--border-width-thin) solid transparent;
 }
 
 .button--subtle:hover:not(:disabled) {
@@ -210,8 +210,8 @@
 .button--subtle:focus:not(:disabled) {
   background-color: var(--surface-focus);
   color: var(--text-neutral-focused);
-  outline: 2px solid var(--border-neutral-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-neutral-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--subtle:active:not(:disabled) {
@@ -223,7 +223,7 @@
 .button--subtle-start-icon {
   background-color: transparent;
   color: var(--text-neutral-default);
-  border: 1px solid transparent;
+  border: var(--border-width-thin) solid transparent;
 }
 
 .button--subtle-start-icon:hover:not(:disabled) {
@@ -234,8 +234,8 @@
 .button--subtle-start-icon:focus:not(:disabled) {
   background-color: var(--surface-focus);
   color: var(--text-neutral-focused);
-  outline: 2px solid var(--border-neutral-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-neutral-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--subtle-start-icon:active:not(:disabled) {
@@ -247,7 +247,7 @@
 .button--subtle-end-icon {
   background-color: transparent;
   color: var(--text-neutral-default);
-  border: 1px solid transparent;
+  border: var(--border-width-thin) solid transparent;
 }
 
 .button--subtle-end-icon:hover:not(:disabled) {
@@ -258,8 +258,8 @@
 .button--subtle-end-icon:focus:not(:disabled) {
   background-color: var(--surface-focus);
   color: var(--text-neutral-focused);
-  outline: 2px solid var(--border-neutral-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-neutral-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--subtle-end-icon:active:not(:disabled) {
@@ -278,7 +278,7 @@
 .button--outline {
   background-color: transparent;
   color: var(--color-primary-default);
-  border: 2px solid var(--border-primary);
+  border: var(--border-width-medium) solid var(--border-primary);
 }
 
 .button--outline:hover:not(:disabled) {
@@ -291,8 +291,8 @@
   background-color: var(--color-primary-container);
   border-color: var(--border-primary-focus);
   color: var(--color-primary-focused);
-  outline: 2px solid var(--border-primary-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-primary-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--outline:active:not(:disabled) {
@@ -305,7 +305,7 @@
 .button--outline-start-icon {
   background-color: transparent;
   color: var(--color-primary-default);
-  border: 2px solid var(--border-primary);
+  border: var(--border-width-medium) solid var(--border-primary);
 }
 
 .button--outline-start-icon:hover:not(:disabled) {
@@ -318,8 +318,8 @@
   background-color: var(--color-primary-container);
   border-color: var(--border-primary-focus);
   color: var(--color-primary-focused);
-  outline: 2px solid var(--border-primary-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-primary-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--outline-start-icon:active:not(:disabled) {
@@ -332,7 +332,7 @@
 .button--outline-end-icon {
   background-color: transparent;
   color: var(--color-primary-default);
-  border: 2px solid var(--border-primary);
+  border: var(--border-width-medium) solid var(--border-primary);
 }
 
 .button--outline-end-icon:hover:not(:disabled) {
@@ -345,8 +345,8 @@
   background-color: var(--color-primary-container);
   border-color: var(--border-primary-focus);
   color: var(--color-primary-focused);
-  outline: 2px solid var(--border-primary-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-primary-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--outline-end-icon:active:not(:disabled) {
@@ -375,8 +375,8 @@
 
 .button--success:focus:not(:disabled) {
   background-color: var(--color-success-focused);
-  outline: 2px solid var(--border-success-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-success-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--success:active:not(:disabled) {
@@ -395,8 +395,8 @@
 
 .button--success-start-icon:focus:not(:disabled) {
   background-color: var(--color-success-focused);
-  outline: 2px solid var(--border-success-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-success-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--success-start-icon:active:not(:disabled) {
@@ -415,8 +415,8 @@
 
 .button--success-end-icon:focus:not(:disabled) {
   background-color: var(--color-success-focused);
-  outline: 2px solid var(--border-success-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-success-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--success-end-icon:active:not(:disabled) {
@@ -442,8 +442,8 @@
 
 .button--warning:focus:not(:disabled) {
   background-color: var(--color-warning-focused);
-  outline: 2px solid var(--border-warning-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-warning-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--warning:active:not(:disabled) {
@@ -462,8 +462,8 @@
 
 .button--warning-start-icon:focus:not(:disabled) {
   background-color: var(--color-warning-focused);
-  outline: 2px solid var(--border-warning-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-warning-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--warning-start-icon:active:not(:disabled) {
@@ -482,8 +482,8 @@
 
 .button--warning-end-icon:focus:not(:disabled) {
   background-color: var(--color-warning-focused);
-  outline: 2px solid var(--border-warning-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-warning-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--warning-end-icon:active:not(:disabled) {
@@ -509,8 +509,8 @@
 
 .button--error:focus:not(:disabled) {
   background-color: var(--color-error-focused);
-  outline: 2px solid var(--border-error-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-error-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--error:active:not(:disabled) {
@@ -529,8 +529,8 @@
 
 .button--error-start-icon:focus:not(:disabled) {
   background-color: var(--color-error-focused);
-  outline: 2px solid var(--border-error-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-error-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--error-start-icon:active:not(:disabled) {
@@ -549,8 +549,8 @@
 
 .button--error-end-icon:focus:not(:disabled) {
   background-color: var(--color-error-focused);
-  outline: 2px solid var(--border-error-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-error-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--error-end-icon:active:not(:disabled) {
@@ -576,8 +576,8 @@
 
 .button--info:focus:not(:disabled) {
   background-color: var(--color-info-focused);
-  outline: 2px solid var(--border-info-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-info-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--info:active:not(:disabled) {
@@ -596,8 +596,8 @@
 
 .button--info-start-icon:focus:not(:disabled) {
   background-color: var(--color-info-focused);
-  outline: 2px solid var(--border-info-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-info-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--info-start-icon:active:not(:disabled) {
@@ -616,8 +616,8 @@
 
 .button--info-end-icon:focus:not(:disabled) {
   background-color: var(--color-info-focused);
-  outline: 2px solid var(--border-info-focus);
-  outline-offset: 2px;
+  outline: var(--border-width-medium) solid var(--border-info-focus);
+  outline-offset: var(--border-width-medium);
 }
 
 .button--info-end-icon:active:not(:disabled) {

@@ -128,6 +128,11 @@
   --font-weight-bold: 700;
   --font-weight-black: 900;
 
+  /* Typography - Font Size */
+  --font-size-small: 14px;
+  --font-size-medium: 16px;
+  --font-size-large: 18px;
+
   /* Scale (Spacing/Sizing) */
   --scale-600: -48px;
   --scale-500: -40px;
@@ -361,6 +366,16 @@
   --sizing-1600: var(--scale-1600);
   --sizing-3200: var(--scale-3200);
   --sizing-6400: var(--scale-6400);
+
+  /* Opacity */
+  --opacity-disabled: 0.5;
+  --opacity-hover: 0.8;
+  --opacity-focus: 0.9;
+
+  /* Transitions */
+  --transition-default: all 0.2s ease-in-out;
+  --transition-fast: all 0.15s ease-in-out;
+  --transition-slow: all 0.3s ease-in-out;
 }
 
 /* Dark Mode */
