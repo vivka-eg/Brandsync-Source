@@ -1,0 +1,97 @@
+{
+  "name": "SignupForm",
+  "description": "Centered signup form with name, email, and password",
+  "structure": {
+    "component": "Container",
+    "props": {
+      "size": "sm",
+      "padding": "lg"
+    },
+    "children": [
+      {
+        "component": "Surface",
+        "props": {
+          "variant": "raised",
+          "padding": "lg"
+        },
+        "children": [
+          {
+            "component": "Stack",
+            "props": {
+              "gap": "lg",
+              "align": "center"
+            },
+            "children": [
+              {
+                "component": "Stack",
+                "props": {
+                  "gap": "sm",
+                  "align": "center"
+                },
+                "children": [
+                  {
+                    "element": "h2",
+                    "content": "Create Account"
+                  },
+                  {
+                    "element": "p",
+                    "content": "Join us today"
+                  }
+                ]
+              },
+              {
+                "component": "Stack",
+                "props": {
+                  "gap": "md",
+                  "align": "start"
+                },
+                "children": [
+                  {
+                    "component": "Input",
+                    "props": {
+                      "type": "text",
+                      "label": "Full Name",
+                      "placeholder": "Enter your name",
+                      "startIcon": "FaUser"
+                    }
+                  },
+                  {
+                    "component": "Input",
+                    "props": {
+                      "type": "email",
+                      "label": "Email",
+                      "placeholder": "Enter your email",
+                      "startIcon": "FaEnvelope"
+                    }
+                  },
+                  {
+                    "component": "PasswordInput",
+                    "props": {
+                      "label": "Password",
+                      "placeholder": "Create a password",
+                      "supportiveText": "Must be at least 8 characters"
+                    }
+                  }
+                ]
+              },
+              {
+                "component": "Divider",
+                "props": {
+                  "direction": "horizontal"
+                }
+              },
+              {
+                "component": "Button",
+                "props": {
+                  "variant": "primary",
+                  "size": "large"
+                },
+                "content": "Create Account"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

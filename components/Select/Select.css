@@ -1,0 +1,120 @@
+/* Select Wrapper */
+.select-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-75);
+  width: 100%;
+}
+
+/* Select Label */
+.select-label {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-default);
+  line-height: var(--scale-200);
+}
+
+/* Select Container */
+.select-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var(--surface-base);
+  border: var(--border-width-thin) solid var(--border-default);
+  border-radius: var(--border-radius-100);
+  transition: var(--transition-default);
+  min-height: var(--sizing-500);
+}
+
+.select-container:hover:not(:has(.select:disabled)) {
+  border-color: var(--border-neutral-hover);
+  background-color: var(--surface-hover);
+}
+
+.select-container:focus-within:not(:has(.select:disabled)) {
+  border-color: var(--border-neutral-focus);
+  background-color: var(--surface-base);
+  outline: var(--border-width-medium) solid var(--border-neutral-focus);
+  outline-offset: var(--border-width-0);
+}
+
+/* Error State */
+.select-container--error {
+  border-color: var(--border-error);
+}
+
+.select-container--error:hover:not(:has(.select:disabled)) {
+  border-color: var(--border-error-hover);
+}
+
+.select-container--error:focus-within:not(:has(.select:disabled)) {
+  border-color: var(--border-error-focus);
+  outline: var(--border-width-medium) solid var(--border-error-focus);
+}
+
+/* Select Field */
+.select {
+  flex: 1;
+  padding: var(--spacing-100) var(--spacing-150);
+  padding-right: var(--spacing-500);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-default);
+  background-color: transparent;
+  border: var(--border-width-0);
+  outline: none;
+  line-height: var(--scale-200);
+  appearance: none;
+  cursor: pointer;
+}
+
+.select option {
+  color: var(--text-default);
+  background-color: var(--surface-base);
+}
+
+.select option:disabled {
+  color: var(--text-muted);
+}
+
+.select:disabled {
+  color: var(--text-on-disabled);
+  cursor: not-allowed;
+}
+
+/* Select Icon */
+.select-icon {
+  position: absolute;
+  right: var(--spacing-150);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--icon-secondary);
+  pointer-events: none;
+}
+
+/* Disabled State */
+.select-container:has(.select:disabled) {
+  background-color: var(--surface-action-disabled);
+  border-color: var(--border-neutral-disabled);
+  cursor: not-allowed;
+}
+
+.select-container:has(.select:disabled) .select-icon {
+  color: var(--icon-disabled);
+}
+
+/* Supportive Text */
+.select-supportive-text {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-secondary);
+  line-height: var(--scale-200);
+}
+
+.select-supportive-text--error {
+  color: var(--text-error);
+}

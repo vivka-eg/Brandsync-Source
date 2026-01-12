@@ -1,0 +1,19 @@
+{
+  "framework": "react",
+  "component": "Row",
+  "props": {
+    "gap": ["sm", "md", "lg"],
+    "align": ["start", "center", "end"]
+  },
+  "slots": ["children"],
+  "rules": [
+    "children are arranged horizontally using flexbox",
+    "gap controls horizontal spacing via CSS gap property",
+    "gap sm maps to --spacing-150 (12px)",
+    "gap md maps to --spacing-200 (16px)",
+    "gap lg maps to --spacing-300 (24px)",
+    "align controls cross-axis alignment via align-items",
+    "default gap is md",
+    "default align is center"
+  ]
+}

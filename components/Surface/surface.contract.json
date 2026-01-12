@@ -1,0 +1,23 @@
+{
+  "framework": "react",
+  "component": "Surface",
+  "props": {
+    "variant": ["base", "raised", "container", "inset"],
+    "padding": ["sm", "md", "lg", "none"]
+  },
+  "slots": ["children"],
+  "rules": [
+    "surface provides semantic background styling",
+    "variant base uses --surface-base background",
+    "variant raised uses --surface-raised background with shadow",
+    "variant container uses --surface-container background with border",
+    "variant inset uses --surface-inset background",
+    "padding sm maps to --spacing-150 (12px)",
+    "padding md maps to --spacing-200 (16px)",
+    "padding lg maps to --spacing-300 (24px)",
+    "padding none applies no padding",
+    "surface has border-radius of --border-radius-100",
+    "default variant is base",
+    "default padding is md"
+  ]
+}

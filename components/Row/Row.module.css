@@ -1,0 +1,28 @@
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.row[data-gap="sm"] {
+  gap: var(--spacing-150);
+}
+
+.row[data-gap="md"] {
+  gap: var(--spacing-200);
+}
+
+.row[data-gap="lg"] {
+  gap: var(--spacing-300);
+}
+
+.row[data-align="start"] {
+  align-items: flex-start;
+}
+
+.row[data-align="center"] {
+  align-items: center;
+}
+
+.row[data-align="end"] {
+  align-items: flex-end;
+}

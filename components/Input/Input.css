@@ -1,0 +1,115 @@
+/* Input Wrapper */
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-75);
+  width: 100%;
+}
+
+/* Input Label */
+.input-label {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-default);
+  line-height: var(--scale-200);
+}
+
+/* Input Container */
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var(--surface-base);
+  border: var(--border-width-thin) solid var(--border-default);
+  border-radius: var(--border-radius-100);
+  transition: var(--transition-default);
+  min-height: var(--sizing-500);
+}
+
+.input-container:hover:not(:has(.input:disabled)) {
+  border-color: var(--border-neutral-hover);
+  background-color: var(--surface-hover);
+}
+
+.input-container:focus-within:not(:has(.input:disabled)) {
+  border-color: var(--border-neutral-focus);
+  background-color: var(--surface-base);
+  outline: var(--border-width-medium) solid var(--border-neutral-focus);
+  outline-offset: var(--border-width-0);
+}
+
+/* Error State */
+.input-container--error {
+  border-color: var(--border-error);
+}
+
+.input-container--error:hover:not(:has(.input:disabled)) {
+  border-color: var(--border-error-hover);
+}
+
+.input-container--error:focus-within:not(:has(.input:disabled)) {
+  border-color: var(--border-error-focus);
+  outline: var(--border-width-medium) solid var(--border-error-focus);
+}
+
+/* Input Field */
+.input {
+  flex: 1;
+  padding: var(--spacing-100) var(--spacing-150);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-default);
+  background-color: transparent;
+  border: var(--border-width-0);
+  outline: none;
+  line-height: var(--scale-200);
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+}
+
+.input:disabled {
+  color: var(--text-on-disabled);
+  cursor: not-allowed;
+}
+
+/* Input with Start Icon */
+.input-icon--start {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: var(--spacing-150);
+  color: var(--icon-secondary);
+  font-size: var(--font-size-large);
+}
+
+.input-container:has(.input-icon--start) .input {
+  padding-left: var(--spacing-75);
+}
+
+/* Disabled State */
+.input-container:has(.input:disabled) {
+  background-color: var(--surface-action-disabled);
+  border-color: var(--border-neutral-disabled);
+  cursor: not-allowed;
+}
+
+.input-container:has(.input:disabled) .input-icon--start {
+  color: var(--icon-disabled);
+}
+
+/* Supportive Text */
+.input-supportive-text {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-secondary);
+  line-height: var(--scale-200);
+}
+
+.input-supportive-text--error {
+  color: var(--text-error);
+}

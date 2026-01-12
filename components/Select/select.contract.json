@@ -1,0 +1,25 @@
+{
+  "framework": "react",
+  "component": "Select",
+  "props": {
+    "label": "string",
+    "placeholder": "string",
+    "supportiveText": "string",
+    "options": "array",
+    "disabled": "boolean",
+    "error": "boolean",
+    "value": "string",
+    "onChange": "function"
+  },
+  "slots": [],
+  "rules": [
+    "select is dropdown field with label and supportive text",
+    "label appears above select field",
+    "supportiveText appears below select field",
+    "options is array of objects with value and label properties",
+    "error state changes border color to --border-error",
+    "disabled state prevents user interaction",
+    "value and onChange must be provided together for controlled select",
+    "select has no children"
+  ]
+}

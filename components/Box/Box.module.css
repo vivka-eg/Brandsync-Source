@@ -1,0 +1,15 @@
+.box {
+  display: block;
+}
+
+.box[data-padding="sm"] {
+  padding: var(--spacing-150);
+}
+
+.box[data-padding="md"] {
+  padding: var(--spacing-200);
+}
+
+.box[data-padding="lg"] {
+  padding: var(--spacing-300);
+}

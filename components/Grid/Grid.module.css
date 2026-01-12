@@ -1,0 +1,32 @@
+.grid {
+  display: grid;
+  width: 100%;
+}
+
+.grid[data-columns="2"] {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid[data-columns="3"] {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid[data-columns="4"] {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid[data-columns="6"] {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.grid[data-gap="sm"] {
+  gap: var(--spacing-150);
+}
+
+.grid[data-gap="md"] {
+  gap: var(--spacing-200);
+}
+
+.grid[data-gap="lg"] {
+  gap: var(--spacing-300);
+}

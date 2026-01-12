@@ -1,0 +1,17 @@
+{
+  "framework": "react",
+  "component": "Divider",
+  "props": {
+    "direction": ["horizontal", "vertical"]
+  },
+  "slots": [],
+  "rules": [
+    "divider renders visual separator line",
+    "direction horizontal creates full-width line with 1px height",
+    "direction vertical creates full-height line with 1px width",
+    "divider uses --border-default color",
+    "divider uses --border-width-thin (1px)",
+    "divider has no children",
+    "default direction is horizontal"
+  ]
+}

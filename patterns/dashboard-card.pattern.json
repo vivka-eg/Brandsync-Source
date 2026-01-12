@@ -1,0 +1,97 @@
+{
+  "name": "DashboardCard",
+  "description": "Metric card for dashboards with title, value, trend, and action",
+  "parameters": [
+    {
+      "name": "title",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "value",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "trend",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "actionLabel",
+      "type": "string",
+      "default": "View Details"
+    }
+  ],
+  "structure": {
+    "component": "Surface",
+    "props": {
+      "variant": "raised",
+      "padding": "lg"
+    },
+    "children": [
+      {
+        "component": "Stack",
+        "props": {
+          "gap": "md",
+          "align": "start"
+        },
+        "children": [
+          {
+            "component": "Stack",
+            "props": {
+              "gap": "sm",
+              "align": "start"
+            },
+            "children": [
+              {
+                "element": "h3",
+                "content": "{{title}}"
+              },
+              {
+                "element": "p",
+                "content": "{{description}}"
+              }
+            ]
+          },
+          {
+            "component": "Divider",
+            "props": {
+              "direction": "horizontal"
+            }
+          },
+          {
+            "component": "Row",
+            "props": {
+              "gap": "md",
+              "align": "center"
+            },
+            "children": [
+              {
+                "element": "h2",
+                "content": "{{value}}"
+              },
+              {
+                "element": "span",
+                "content": "{{trend}}"
+              }
+            ]
+          },
+          {
+            "component": "Button",
+            "props": {
+              "variant": "primary",
+              "size": "small"
+            },
+            "content": "{{actionLabel}}"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+.divider {
+  background-color: var(--border-default);
+}
+
+.divider[data-direction="horizontal"] {
+  width: 100%;
+  height: var(--border-width-thin);
+}
+
+.divider[data-direction="vertical"] {
+  width: var(--border-width-thin);
+  height: 100%;
+}

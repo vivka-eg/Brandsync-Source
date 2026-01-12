@@ -1,0 +1,19 @@
+{
+  "framework": "react",
+  "component": "Grid",
+  "props": {
+    "columns": ["2", "3", "4", "6"],
+    "gap": ["sm", "md", "lg"]
+  },
+  "slots": ["children"],
+  "rules": [
+    "children are arranged in CSS grid with equal column widths",
+    "columns defines number of equal-width columns",
+    "gap controls spacing between grid items",
+    "gap sm maps to --spacing-150 (12px)",
+    "gap md maps to --spacing-200 (16px)",
+    "gap lg maps to --spacing-300 (24px)",
+    "default columns is 3",
+    "default gap is md"
+  ]
+}

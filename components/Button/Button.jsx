@@ -1,4 +1,4 @@
-import '../styles/_tokens.css';
+import '../../styles/_tokens.css';
 import './Button.css';
 
 const Button = ({

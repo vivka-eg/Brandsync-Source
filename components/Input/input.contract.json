@@ -1,0 +1,26 @@
+{
+  "framework": "react",
+  "component": "Input",
+  "props": {
+    "type": ["text", "email", "number"],
+    "label": "string",
+    "placeholder": "string",
+    "supportiveText": "string",
+    "startIcon": "react-node",
+    "disabled": "boolean",
+    "error": "boolean",
+    "value": "string",
+    "onChange": "function"
+  },
+  "slots": [],
+  "rules": [
+    "input is form field with label and supportive text",
+    "label appears above input field",
+    "supportiveText appears below input field",
+    "startIcon appears at start of input field",
+    "error state changes border color to --border-error",
+    "disabled state prevents user interaction",
+    "value and onChange must be provided together for controlled input",
+    "input has no children"
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "name": "SettingsPanel",
+  "description": "Settings page with profile and preferences sections",
+  "structure": {
+    "component": "Container",
+    "props": {
+      "size": "lg",
+      "padding": "lg"
+    },
+    "children": [
+      {
+        "component": "Stack",
+        "props": {
+          "gap": "lg",
+          "align": "start"
+        },
+        "children": [
+          {
+            "element": "h1",
+            "content": "Settings"
+          },
+          {
+            "component": "Surface",
+            "props": {
+              "variant": "container",
+              "padding": "lg"
+            },
+            "children": [
+              {
+                "component": "Stack",
+                "props": {
+                  "gap": "lg",
+                  "align": "start"
+                },
+                "children": [
+                  {
+                    "component": "Stack",
+                    "props": {
+                      "gap": "md",
+                      "align": "start"
+                    },
+                    "children": [
+                      {
+                        "element": "h3",
+                        "content": "Profile Information"
+                      },
+                      {
+                        "component": "Stack",
+                        "props": {
+                          "gap": "md",
+                          "align": "start"
+                        },
+                        "children": [
+                          {
+                            "component": "Input",
+                            "props": {
+                              "type": "text",
+                              "label": "Username",
+                              "placeholder": "Enter username"
+                            }
+                          },
+                          {
+                            "component": "Input",
+                            "props": {
+                              "type": "email",
+                              "label": "Email Address",
+                              "placeholder": "Enter email"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "component": "Divider",
+                    "props": {
+                      "direction": "horizontal"
+                    }
+                  },
+                  {
+                    "component": "Stack",
+                    "props": {
+                      "gap": "md",
+                      "align": "start"
+                    },
+                    "children": [
+                      {
+                        "element": "h3",
+                        "content": "Preferences"
+                      },
+                      {
+                        "component": "Select",
+                        "props": {
+                          "label": "Theme",
+                          "placeholder": "Select theme",
+                          "options": [
+                            { "value": "light", "label": "Light" },
+                            { "value": "dark", "label": "Dark" },
+                            { "value": "auto", "label": "Auto" }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "component": "Divider",
+                    "props": {
+                      "direction": "horizontal"
+                    }
+                  },
+                  {
+                    "component": "Row",
+                    "props": {
+                      "gap": "sm",
+                      "align": "start"
+                    },
+                    "children": [
+                      {
+                        "component": "Button",
+                        "props": {
+                          "variant": "primary",
+                          "size": "medium"
+                        },
+                        "content": "Save Changes"
+                      },
+                      {
+                        "component": "Button",
+                        "props": {
+                          "variant": "neutral",
+                          "size": "medium"
+                        },
+                        "content": "Cancel"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -77,6 +77,52 @@ h4 {
   color: var(--text-secondary);
 }
 
+p {
+  margin-bottom: var(--spacing-100);
+  color: var(--text-muted);
+  font-size: var(--font-size-small);
+}
+
+/* Global Component Toggle */
+.component-toggle {
+  display: flex;
+  gap: var(--spacing-200);
+  margin-bottom: var(--spacing-500);
+  padding: var(--spacing-50);
+  background-color: var(--surface-container);
+  border-radius: var(--border-radius-100);
+  border: var(--border-width-thin) solid var(--border-default);
+}
+
+.component-toggle-btn {
+  flex: 1;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--spacing-150) var(--spacing-300);
+  background-color: transparent;
+  border: var(--border-width-0);
+  border-radius: var(--border-radius-100);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition-default);
+}
+
+.component-toggle-btn:hover {
+  background-color: var(--surface-hover);
+  color: var(--text-default);
+}
+
+.component-toggle-btn--active {
+  background-color: var(--color-primary-default);
+  color: var(--text-on-action);
+}
+
+.component-toggle-btn--active:hover {
+  background-color: var(--color-primary-hover);
+  color: var(--text-on-action);
+}
+
 /* Tabs */
 .tabs {
   display: flex;
@@ -142,4 +188,11 @@ h4 {
   font-size: 12px;
   color: var(--text-muted);
   font-weight: var(--font-weight-medium);
+}
+
+/* Input Grid */
+.input-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-400);
 }

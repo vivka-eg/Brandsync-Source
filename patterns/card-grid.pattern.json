@@ -1,0 +1,94 @@
+{
+  "name": "CardGrid",
+  "description": "Responsive grid of content cards with images",
+  "parameters": [
+    {
+      "name": "columns",
+      "type": "string",
+      "enum": ["2", "3", "4"],
+      "default": "3"
+    },
+    {
+      "name": "items",
+      "type": "array",
+      "required": true,
+      "schema": {
+        "id": "string",
+        "title": "string",
+        "description": "string",
+        "imageUrl": "string",
+        "actionLabel": "string (optional)"
+      }
+    }
+  ],
+  "structure": {
+    "component": "Container",
+    "props": {
+      "size": "lg",
+      "padding": "lg"
+    },
+    "children": [
+      {
+        "component": "Grid",
+        "props": {
+          "columns": "{{columns}}",
+          "gap": "lg"
+        },
+        "children": {
+          "repeat": "{{items}}",
+          "template": {
+            "component": "Surface",
+            "props": {
+              "variant": "raised",
+              "padding": "lg"
+            },
+            "children": [
+              {
+                "component": "Stack",
+                "props": {
+                  "gap": "md",
+                  "align": "start"
+                },
+                "children": [
+                  {
+                    "element": "img",
+                    "attributes": {
+                      "src": "{{item.imageUrl}}",
+                      "alt": "{{item.title}}",
+                      "style": "width: 100%; height: 200px; object-fit: cover; border-radius: 8px;"
+                    }
+                  },
+                  {
+                    "component": "Stack",
+                    "props": {
+                      "gap": "sm",
+                      "align": "start"
+                    },
+                    "children": [
+                      {
+                        "element": "h3",
+                        "content": "{{item.title}}"
+                      },
+                      {
+                        "element": "p",
+                        "content": "{{item.description}}"
+                      }
+                    ]
+                  },
+                  {
+                    "component": "Button",
+                    "props": {
+                      "variant": "primary",
+                      "size": "small"
+                    },
+                    "content": "{{item.actionLabel || 'Learn More'}}"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

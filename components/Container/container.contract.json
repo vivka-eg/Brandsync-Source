@@ -1,0 +1,22 @@
+{
+  "framework": "react",
+  "component": "Container",
+  "props": {
+    "size": ["sm", "md", "lg", "full"],
+    "padding": ["sm", "md", "lg"]
+  },
+  "slots": ["children"],
+  "rules": [
+    "container centers content and constrains max-width",
+    "size sm sets max-width to 640px",
+    "size md sets max-width to 768px",
+    "size lg sets max-width to 1024px",
+    "size full sets no max-width constraint",
+    "padding sm maps to --spacing-200 (16px) horizontal",
+    "padding md maps to --spacing-300 (24px) horizontal",
+    "padding lg maps to --spacing-500 (40px) horizontal",
+    "padding applies only to left and right sides",
+    "default size is lg",
+    "default padding is md"
+  ]
+}

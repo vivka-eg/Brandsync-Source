@@ -1,0 +1,15 @@
+{
+  "framework": "react",
+  "component": "Box",
+  "props": {
+    "padding": ["sm", "md", "lg"]
+  },
+  "slots": ["children"],
+  "rules": [
+    "box provides uniform padding on all sides",
+    "padding sm maps to --spacing-150 (12px)",
+    "padding md maps to --spacing-200 (16px)",
+    "padding lg maps to --spacing-300 (24px)",
+    "default padding is md"
+  ]
+}

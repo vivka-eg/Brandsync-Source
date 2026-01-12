@@ -1,0 +1,20 @@
+{
+  "framework": "react",
+  "component": "Button",
+  "props": {
+    "variant": ["primary", "neutral", "subtle", "outline", "success", "warning", "error", "info"],
+    "size": ["small", "medium", "large"],
+    "disabled": "boolean",
+    "startIcon": "react-node",
+    "endIcon": "react-node"
+  },
+  "slots": ["children"],
+  "rules": [
+    "children must be text content only",
+    "only one primary button allowed per surface",
+    "startIcon and endIcon cannot both be present simultaneously",
+    "disabled button must not respond to click events",
+    "default variant is primary",
+    "default size is large"
+  ]
+}

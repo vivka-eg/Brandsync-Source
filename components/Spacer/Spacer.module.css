@@ -1,0 +1,27 @@
+.spacer {
+  flex-shrink: 0;
+}
+
+.spacer[data-direction="vertical"][data-size="sm"] {
+  height: var(--spacing-150);
+}
+
+.spacer[data-direction="vertical"][data-size="md"] {
+  height: var(--spacing-200);
+}
+
+.spacer[data-direction="vertical"][data-size="lg"] {
+  height: var(--spacing-300);
+}
+
+.spacer[data-direction="horizontal"][data-size="sm"] {
+  width: var(--spacing-150);
+}
+
+.spacer[data-direction="horizontal"][data-size="md"] {
+  width: var(--spacing-200);
+}
+
+.spacer[data-direction="horizontal"][data-size="lg"] {
+  width: var(--spacing-300);
+}

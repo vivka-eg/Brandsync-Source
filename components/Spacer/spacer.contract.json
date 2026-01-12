@@ -1,0 +1,20 @@
+{
+  "framework": "react",
+  "component": "Spacer",
+  "props": {
+    "size": ["sm", "md", "lg"],
+    "direction": ["horizontal", "vertical"]
+  },
+  "slots": [],
+  "rules": [
+    "spacer creates fixed empty space",
+    "direction vertical creates height",
+    "direction horizontal creates width",
+    "size sm maps to --spacing-150 (12px)",
+    "size md maps to --spacing-200 (16px)",
+    "size lg maps to --spacing-300 (24px)",
+    "spacer has no children",
+    "default size is md",
+    "default direction is vertical"
+  ]
+}
