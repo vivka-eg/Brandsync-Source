@@ -1,0 +1,31 @@
+{
+  "pattern": "login-form",
+  "description": "Example of generating LoginForm pattern",
+  "input": {
+    "pattern": "login-form"
+  },
+  "expectedOutput": {
+    "language": "tsx",
+    "imports": [
+      "import React, { useState } from 'react';",
+      "import { Row } from '../components/Row';",
+      "import { Container } from '../components/Container';",
+      "import { Surface } from '../components/Surface';",
+      "import { Stack } from '../components/Stack';",
+      "import Input from '../components/Input';",
+      "import PasswordInput from '../components/PasswordInput';",
+      "import { Divider } from '../components/Divider';",
+      "import Button from '../components/Button';",
+      "import { FaEnvelope } from 'react-icons/fa';"
+    ],
+    "component": "export const LoginForm: React.FC = () => { /* ... */ }",
+    "structure": "Row > [Container > img, Container > Surface > Stack > [heading, inputs, divider, buttons]]"
+  },
+  "validationChecks": [
+    "All components exist in components/index.json",
+    "All props match component contracts",
+    "No inline styles except on img element",
+    "Gap values are sm, md, or lg only",
+    "All spacing uses design tokens"
+  ]
+}

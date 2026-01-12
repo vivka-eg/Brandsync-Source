@@ -1,0 +1,57 @@
+{
+  "version": "1.0.0",
+  "patterns": {
+    "login-form": {
+      "name": "LoginForm",
+      "contract": "./login-form.pattern.json",
+      "description": "Split-screen login with image and form",
+      "category": "authentication",
+      "parameters": [],
+      "components": ["Row", "Container", "Surface", "Stack", "Input", "PasswordInput", "Divider", "Button"],
+      "complexity": "medium"
+    },
+    "signup-form": {
+      "name": "SignupForm",
+      "contract": "./signup-form.pattern.json",
+      "description": "Centered signup form with name, email, and password",
+      "category": "authentication",
+      "parameters": [],
+      "components": ["Container", "Surface", "Stack", "Input", "PasswordInput", "Divider", "Button"],
+      "complexity": "simple"
+    },
+    "dashboard-card": {
+      "name": "DashboardCard",
+      "contract": "./dashboard-card.pattern.json",
+      "description": "Metric card for dashboards with title, value, trend, and action",
+      "category": "data-display",
+      "parameters": ["title", "description", "value", "trend", "actionLabel"],
+      "components": ["Surface", "Stack", "Row", "Divider", "Button"],
+      "complexity": "simple"
+    },
+    "settings-panel": {
+      "name": "SettingsPanel",
+      "contract": "./settings-panel.pattern.json",
+      "description": "Settings page with profile and preferences sections",
+      "category": "settings",
+      "parameters": [],
+      "components": ["Container", "Stack", "Surface", "Input", "Select", "Divider", "Row", "Button"],
+      "complexity": "complex"
+    },
+    "card-grid": {
+      "name": "CardGrid",
+      "contract": "./card-grid.pattern.json",
+      "description": "Responsive grid of content cards with images",
+      "category": "content-display",
+      "parameters": ["columns", "items"],
+      "components": ["Container", "Grid", "Surface", "Stack", "Button"],
+      "complexity": "medium",
+      "hasLoop": true
+    }
+  },
+  "categories": {
+    "authentication": ["login-form", "signup-form"],
+    "data-display": ["dashboard-card"],
+    "content-display": ["card-grid"],
+    "settings": ["settings-panel"]
+  }
+}

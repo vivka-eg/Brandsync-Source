@@ -1,0 +1,40 @@
+{
+  "pattern": "dashboard-card",
+  "description": "Example of generating parameterized DashboardCard pattern",
+  "input": {
+    "pattern": "dashboard-card",
+    "parameters": {
+      "title": "Total Revenue",
+      "description": "Revenue this month",
+      "value": "$45,231",
+      "trend": "+20.1%",
+      "actionLabel": "View Details"
+    }
+  },
+  "expectedOutput": {
+    "language": "tsx",
+    "imports": [
+      "import React from 'react';",
+      "import { Surface } from '../components/Surface';",
+      "import { Stack } from '../components/Stack';",
+      "import { Row } from '../components/Row';",
+      "import { Divider } from '../components/Divider';",
+      "import Button from '../components/Button';"
+    ],
+    "component": "export const DashboardCard: React.FC<DashboardCardProps> = ({ title, description, value, trend, actionLabel }) => { /* ... */ }",
+    "structure": "Surface > Stack > [heading, divider, metric row, button]"
+  },
+  "parameterSubstitution": {
+    "{{title}}": "Total Revenue",
+    "{{description}}": "Revenue this month",
+    "{{value}}": "$45,231",
+    "{{trend}}": "+20.1%",
+    "{{actionLabel}}": "View Details"
+  },
+  "validationChecks": [
+    "All required parameters provided",
+    "Parameter types match schema",
+    "Template variables resolved correctly",
+    "All components exist and props validated"
+  ]
+}

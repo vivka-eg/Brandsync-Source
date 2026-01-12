@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "rules": {
+    "component_must_exist": {
+      "enabled": true,
+      "description": "All components referenced must exist in components/index.json"
+    },
+    "props_must_validate": {
+      "enabled": true,
+      "description": "All props must match component contract allowed values"
+    },
+    "no_inline_styles": {
+      "enabled": true,
+      "description": "Inline styles forbidden except for images",
+      "exceptions": ["img"]
+    },
+    "no_className_prop": {
+      "enabled": true,
+      "description": "className prop forbidden on all components"
+    },
+    "no_style_prop": {
+      "enabled": true,
+      "description": "style prop forbidden on all components",
+      "exceptions": ["img"]
+    },
+    "spacing_tokens_only": {
+      "enabled": true,
+      "description": "Spacing must use tokens from styles/tokens.json",
+      "allowedValues": ["sm", "md", "lg", "none"]
+    },
+    "no_margin": {
+      "enabled": true,
+      "description": "Margin CSS property forbidden, use gap instead"
+    },
+    "children_required": {
+      "enabled": true,
+      "description": "Components with slots must have children",
+      "exceptions": ["Spacer", "Divider"]
+    },
+    "no_arbitrary_props": {
+      "enabled": true,
+      "description": "Only props defined in contract are allowed"
+    }
+  },
+  "errorMessages": {
+    "component_not_found": "Component '{{component}}' not found in components/index.json",
+    "invalid_prop": "Prop '{{prop}}' not allowed on component '{{component}}'",
+    "invalid_prop_value": "Prop '{{prop}}' value '{{value}}' not allowed. Must be one of: {{allowed}}",
+    "inline_style_forbidden": "Inline style forbidden on component '{{component}}'",
+    "className_forbidden": "className prop forbidden on component '{{component}}'",
+    "margin_forbidden": "margin CSS property forbidden, use gap prop instead",
+    "missing_children": "Component '{{component}}' requires children",
+    "unknown_token": "Token '{{token}}' not found in styles/tokens.json"
+  },
+  "validation": {
+    "strictMode": true,
+    "failOnWarning": false,
+    "allowExperimentalFeatures": false
+  }
+}

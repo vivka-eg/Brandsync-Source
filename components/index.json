@@ -1,0 +1,82 @@
+{
+  "version": "1.0.0",
+  "components": {
+    "Button": {
+      "contract": "./Button/button.contract.json",
+      "implementation": "./Button/Button.jsx",
+      "styles": "./Button/Button.css",
+      "export": "./Button/index.ts"
+    },
+    "Input": {
+      "contract": "./Input/input.contract.json",
+      "implementation": "./Input/Input.jsx",
+      "styles": "./Input/Input.css",
+      "export": "./Input/index.ts"
+    },
+    "Select": {
+      "contract": "./Select/select.contract.json",
+      "implementation": "./Select/Select.jsx",
+      "styles": "./Select/Select.css",
+      "export": "./Select/index.ts"
+    },
+    "PasswordInput": {
+      "contract": "./PasswordInput/passwordinput.contract.json",
+      "implementation": "./PasswordInput/PasswordInput.jsx",
+      "styles": "./PasswordInput/PasswordInput.css",
+      "export": "./PasswordInput/index.ts"
+    },
+    "Stack": {
+      "contract": "./Stack/stack.contract.json",
+      "implementation": "./Stack/Stack.tsx",
+      "styles": "./Stack/Stack.module.css",
+      "export": "./Stack/index.ts"
+    },
+    "Row": {
+      "contract": "./Row/row.contract.json",
+      "implementation": "./Row/Row.tsx",
+      "styles": "./Row/Row.module.css",
+      "export": "./Row/index.ts"
+    },
+    "Container": {
+      "contract": "./Container/container.contract.json",
+      "implementation": "./Container/Container.tsx",
+      "styles": "./Container/Container.module.css",
+      "export": "./Container/index.ts"
+    },
+    "Grid": {
+      "contract": "./Grid/grid.contract.json",
+      "implementation": "./Grid/Grid.tsx",
+      "styles": "./Grid/Grid.module.css",
+      "export": "./Grid/index.ts"
+    },
+    "Box": {
+      "contract": "./Box/box.contract.json",
+      "implementation": "./Box/Box.tsx",
+      "styles": "./Box/Box.module.css",
+      "export": "./Box/index.ts"
+    },
+    "Spacer": {
+      "contract": "./Spacer/spacer.contract.json",
+      "implementation": "./Spacer/Spacer.tsx",
+      "styles": "./Spacer/Spacer.module.css",
+      "export": "./Spacer/index.ts"
+    },
+    "Divider": {
+      "contract": "./Divider/divider.contract.json",
+      "implementation": "./Divider/Divider.tsx",
+      "styles": "./Divider/Divider.module.css",
+      "export": "./Divider/index.ts"
+    },
+    "Surface": {
+      "contract": "./Surface/surface.contract.json",
+      "implementation": "./Surface/Surface.tsx",
+      "styles": "./Surface/Surface.module.css",
+      "export": "./Surface/index.ts"
+    }
+  },
+  "categories": {
+    "layout": ["Stack", "Row", "Container", "Grid", "Box", "Spacer", "Divider", "Surface"],
+    "form": ["Input", "Select", "PasswordInput"],
+    "action": ["Button"]
+  }
+}

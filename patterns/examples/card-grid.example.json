@@ -1,0 +1,58 @@
+{
+  "pattern": "card-grid",
+  "description": "Example of generating CardGrid pattern with loop",
+  "input": {
+    "pattern": "card-grid",
+    "parameters": {
+      "columns": "3",
+      "items": [
+        {
+          "id": "1",
+          "title": "Product 1",
+          "description": "Description for product 1",
+          "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400",
+          "actionLabel": "View Product"
+        },
+        {
+          "id": "2",
+          "title": "Product 2",
+          "description": "Description for product 2",
+          "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400",
+          "actionLabel": "View Product"
+        },
+        {
+          "id": "3",
+          "title": "Product 3",
+          "description": "Description for product 3",
+          "imageUrl": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400",
+          "actionLabel": "View Product"
+        }
+      ]
+    }
+  },
+  "expectedOutput": {
+    "language": "tsx",
+    "imports": [
+      "import React from 'react';",
+      "import { Container } from '../components/Container';",
+      "import { Grid } from '../components/Grid';",
+      "import { Surface } from '../components/Surface';",
+      "import { Stack } from '../components/Stack';",
+      "import Button from '../components/Button';"
+    ],
+    "component": "export const CardGrid: React.FC<CardGridProps> = ({ items, columns }) => { /* ... */ }",
+    "structure": "Container > Grid > [Surface (repeated for each item)]"
+  },
+  "loopExpansion": {
+    "repeat": "{{items}}",
+    "iterations": 3,
+    "template": "Surface > Stack > [img, heading stack, button]"
+  },
+  "validationChecks": [
+    "columns parameter is valid enum value",
+    "items array has correct schema",
+    "Loop generates correct number of children",
+    "Each item has required properties",
+    "Image URLs are valid format"
+  ]
+}
