@@ -18,6 +18,7 @@ function App() {
   const [activeComponent, setActiveComponent] = useState('button');
   const [activeTab, setActiveTab] = useState('primary');
   const [theme, setTheme] = useState('light');
+  const [activeUI, setActiveUI] = useState('login');
 
   // Input field states
   const [textInput, setTextInput] = useState('');
@@ -67,6 +68,12 @@ function App() {
           onClick={() => setActiveComponent('layout')}
         >
           Layout Primitives
+        </button>
+        <button
+          className={`component-toggle-btn ${activeComponent === 'ui' ? 'component-toggle-btn--active' : ''}`}
+          onClick={() => setActiveComponent('ui')}
+        >
+          User Interface
         </button>
       </div>
 
@@ -1801,6 +1808,127 @@ function App() {
               </Grid>
             </div>
           </section>
+        </>
+      )}
+
+      {/* User Interface Section */}
+      {activeComponent === 'ui' && (
+        <>
+          <h2>User Interface Patterns</h2>
+
+          {/* UI Pattern Toggle */}
+          <div className="tabs">
+            <button
+              className={`tab ${activeUI === 'login' ? 'tab--active' : ''}`}
+              onClick={() => setActiveUI('login')}
+            >
+              Login Form
+            </button>
+            <button
+              className={`tab ${activeUI === 'signup' ? 'tab--active' : ''}`}
+              onClick={() => setActiveUI('signup')}
+            >
+              Signup Form
+            </button>
+            <button
+              className={`tab ${activeUI === 'dashboard' ? 'tab--active' : ''}`}
+              onClick={() => setActiveUI('dashboard')}
+            >
+              Dashboard Card
+            </button>
+            <button
+              className={`tab ${activeUI === 'settings' ? 'tab--active' : ''}`}
+              onClick={() => setActiveUI('settings')}
+            >
+              Settings Panel
+            </button>
+            <button
+              className={`tab ${activeUI === 'cards' ? 'tab--active' : ''}`}
+              onClick={() => setActiveUI('cards')}
+            >
+              Card Grid
+            </button>
+          </div>
+
+          {activeUI === 'login' && (
+            <section className="button-section">
+              <h3>Login Form Pattern</h3>
+              <div className="button-demo">
+                <Row gap="md" align="center">
+                  <Container size="md" padding="none">
+                    <img
+                      src="https://images.unsplash.com/photo-1557683316-973673baf926?w=800&q=80"
+                      alt="Login visual"
+                      style={{ width: '100%', height: '100vh', objectFit: 'cover' }}
+                    />
+                  </Container>
+                  <Container size="md" padding="lg">
+                    <Surface variant="raised" padding="lg">
+                      <Stack gap="lg" align="center">
+                        <Stack gap="sm" align="center">
+                          <h2>Welcome Back</h2>
+                          <p>Sign in to your account</p>
+                        </Stack>
+                        <Stack gap="md" align="start">
+                          <Input
+                            type="email"
+                            label="Email"
+                            placeholder="Enter your email"
+                            startIcon={<FaEnvelope />}
+                          />
+                          <PasswordInput
+                            label="Password"
+                            placeholder="Enter your password"
+                          />
+                        </Stack>
+                        <Divider direction="horizontal" />
+                        <Row gap="sm" align="center">
+                          <Button variant="primary" size="medium">Sign In</Button>
+                          <Button variant="neutral" size="medium">Cancel</Button>
+                        </Row>
+                      </Stack>
+                    </Surface>
+                  </Container>
+                </Row>
+              </div>
+            </section>
+          )}
+
+          {activeUI === 'signup' && (
+            <section className="button-section">
+              <h3>Signup Form Pattern</h3>
+              <div className="button-demo">
+                <p>Centered signup form</p>
+              </div>
+            </section>
+          )}
+
+          {activeUI === 'dashboard' && (
+            <section className="button-section">
+              <h3>Dashboard Card Pattern</h3>
+              <div className="button-demo">
+                <p>Parameterized metric card</p>
+              </div>
+            </section>
+          )}
+
+          {activeUI === 'settings' && (
+            <section className="button-section">
+              <h3>Settings Panel Pattern</h3>
+              <div className="button-demo">
+                <p>Settings page layout</p>
+              </div>
+            </section>
+          )}
+
+          {activeUI === 'cards' && (
+            <section className="button-section">
+              <h3>Card Grid Pattern</h3>
+              <div className="button-demo">
+                <p>Content grid with loop/repeat</p>
+              </div>
+            </section>
+          )}
         </>
       )}
     </div>

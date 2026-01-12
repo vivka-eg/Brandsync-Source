@@ -1,0 +1,25 @@
+# Development files
+src/
+.git/
+.gitignore
+.claude/
+node_modules/
+
+# Build config
+vite.config.js
+tsconfig.json
+
+# Documentation (internal)
+PROJECT_README.md
+
+# Test and demo files
+*.test.js
+*.spec.js
+
+# Raw design tokens (keep processed version)
+Brandsynctokens.json
+design-tokens.colors.json
+
+# IDE
+.vscode/
+.idea/
